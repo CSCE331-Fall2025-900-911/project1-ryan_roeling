@@ -1,12 +1,47 @@
-.blue_overline_text {
-    color: green;
-    text-decoration: underline;
+/* alternative.css */
+body {
+  background-color: #1e1e1e;  /* dark background */
+  color: #00ffcc;             /* bright turquoise */
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 20px;
 }
-h1 {
-    color: gray;
+
+h3 {
+  font-size: 2.5em;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: none;
+  border-bottom: 3px dashed #00ffcc;
+  padding-bottom: 10px;
+}
+
+.blue_overline_text {
+  color: #ff6600;  /* bright orange */
+  border-top: 2px dotted #ff6600;
+  padding-top: 5px;
+  font-size: 1.2em;
 }
 
 #red_underline_text {
-    color: purple;
-    text-decoration: overline;
+  color: #ff0066;  /* hot pink */
+  border-bottom: 2px dotted #ff0066;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #00ffcc;
+  color: #1e1e1e;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: 2px solid #00ffcc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #008080;
+  color: white;
 }

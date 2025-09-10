@@ -1,13 +1,44 @@
-.blue_overline_text {
-    color: blue;
-    text-decoration: overline;
+/* style.css */
+body {
+  background-color: #fff8f0;  /* light cream */
+  color: #990000;             /* dark red */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 20px;
 }
-h1 {
-    color: gray;
+
+h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid #990000;
+  padding-bottom: 10px;
+}
+
+.blue_overline_text {
+  color: #003366;    /* navy blue */
+  border-top: 2px solid #003366;
+  padding-top: 5px;
+  font-size: 1.2em;
 }
 
 #red_underline_text {
-    color: red;
-    text-decoration: underline;
+  color: #cc0000;
+  border-bottom: 2px solid #cc0000;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
+button {
+  background-color: #990000;
+  color: white;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
