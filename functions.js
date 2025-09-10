@@ -1,6 +1,14 @@
-var num = 0; //global variable
+let isDefault = true;
 
 function button1() {
-    num++;
-    document.getElementById("output").innerHTML = "Press x"+num;
+   const themeLink = document.getElementById('themeStyleshee');
+
+   if(isDefault) {
+    themeLink.href = "alternative.css";
+   }
+   else {
+    themeLink.href = 'style.css';
+   }
+
+   isDefault = !isDefault;
 }
