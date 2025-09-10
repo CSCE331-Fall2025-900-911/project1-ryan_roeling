@@ -1,7 +1,7 @@
 let isDefault = true;
 
 function button1() {
-   const themeLink = document.getElementById('themeStyleshee');
+   const themeLink = document.getElementById('themeStylesheet');
 
    if(isDefault) {
     themeLink.href = "alternative.css";
