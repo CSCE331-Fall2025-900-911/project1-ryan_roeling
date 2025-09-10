@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Generative AI Demo</title>
+  <meta name="description" content="Demo page showing a simple generative-AI prompt builder. Inline styles only.">
+  <style>
+    /* Inline CSS required by assignment for the AI page */
+    body { font-family: Arial, Helvetica, sans-serif; margin: 20px; background: linear-gradient(#f7f9fc,#ffffff); color: #222; }
+    header { margin-bottom: 18px; }
+    .prompt-box { width: 100%; max-width: 900px; min-height: 160px; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .controls { margin-top: 10px; display:flex; gap:10px; flex-wrap:wrap; }
+    button { padding:8px 12px; border-radius:6px; border:1px solid #888; cursor:pointer; background:#fff; }
+    .result { margin-top:18px; max-width:900px; white-space:pre-wrap; background:#f4f7fb; padding:12px; border-radius:8px; border:1px solid #e0e6ef; }
+    nav { margin-bottom: 14px; }
+    nav a { margin-right: 12px; color:#0066cc; text-decoration:none; }
+  </style>
 </head>
 <body>
-    <h1>AI Generated Page</h1>
-    <a href="index.html">Back To Landing</a>
+  <nav>
+    <!-- minimal nav: links back to the other pages (the AI page is exempt from stylesheet toggle) -->
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="service.html">Service</a>
+  </nav>
+
+  <header>
+    <h1>Generative AI — Prompt Builder Demo</h1>
+    <p>This page uses inline styling and includes a prompt textbox that stores the final prompt used. The box below represents the prompt you would submit to a generative service.</p>
+  </header>
+
+  <main>
+    <label for="prompt">Current Prompt (editable):</label>
+    <textarea id="prompt" class="prompt-box" aria-label="AI prompt">Write a short, professional bio for a computer science student who enjoys systems programming, teaching, and web development.</textarea>
+
+    <div class="controls">
+      <button id="addDetail">Add: Explain a recent project</button>
+      <button id="focusTone">Add: Make the tone more formal</button>
+      <button id="finalize">Finalize Prompt</button>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">Final prompt will appear here after you click "Finalize Prompt".</div>
+
+    <h3>Final Prompt Used (saved textbox)</h3>
+    <!-- The assignment asked that the page "Creates a text box in the new page that contains the prompt used by you in the final version" -->
+    <textarea id="finalPromptBox" class="prompt-box" readonly></textarea>
+
+    <p><a href="index.html">Back To Landing</a></p>
+  </main>
+
+  <script>
+    // Local prompt building logic — does not call external APIs.
+    const promptEl = document.getElementById('prompt');
+    const resultEl = document.getElementById('result');
+    const finalBox = document.getElementById('finalPromptBox');
+
+    document.getElementById('addDetail').addEventListener('click', () => {
+      promptEl.value += " Include a succinct explanation of a recent project that demonstrates concurrency or a web deployment.";
+    });
+
+    document.getElementById('focusTone').addEventListener('click', () => {
+      promptEl.value += " Use a formal professional tone and emphasize collaboration and reliability.";
+    });
+
+    document.getElementById('finalize').addEventListener('click', () => {
+      const finalPrompt = promptEl.value.trim();
+      if (!finalPrompt) {
+        resultEl.textContent = "Prompt is empty — please enter some text first.";
+        finalBox.value = "";
+        return;
+      }
+      // For the assignment we show the final prompt in the result area and copy it into the saved prompt box.
+      resultEl.textContent = "Final prompt (preview):\n\n" + finalPrompt;
+      finalBox.value = finalPrompt;
+    });
+  </script>
 </body>
 </html>
