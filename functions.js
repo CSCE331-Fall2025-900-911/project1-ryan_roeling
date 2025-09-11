@@ -4,10 +4,10 @@ function applyTheme(isDefault) {
 
   if (isDefault) {
     themeLink.href = "style.css";
-    if (profileImage) profileImage.src = "images/profile-light.jpg";
+    if (profileImage) profileImage.src = "profile-light.jpg";
   } else {
     themeLink.href = "alternative.css";
-    if (profileImage) profileImage.src = "images/profile-dark.jpg";
+    if (profileImage) profileImage.src = "profile-dark.jpg";
   }
 }
 
