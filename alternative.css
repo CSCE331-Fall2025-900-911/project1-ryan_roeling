@@ -1,78 +1,130 @@
-/* alternative.css */
+/* alternative.css — Fun/Creative Theme */
+
+/* Global */
 body {
-  background-color: #1e1e1e;  /* dark background */
-  color: #00ffcc;             /* bright turquoise */
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  margin: 20px;
-}
-
-h3 {
-  font-size: 2.5em;
-  font-weight: normal;
-  font-style: italic;
-  text-transform: none;
-  border-bottom: 3px dashed #00ffcc;
-  padding-bottom: 10px;
-}
-
-.blue_overline_text {
-  color: #ff6600;  /* bright orange */
-  border-top: 2px dotted #ff6600;
-  padding-top: 5px;
-  font-size: 1.2em;
-}
-
-#red_underline_text {
-  color: #ff0066;  /* hot pink */
-  border-bottom: 2px dotted #ff0066;
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-button {
-  background-color: #00ffcc;
-  color: #1e1e1e;
-  font-size: 1.1em;
-  padding: 10px 20px;
-  border: 2px solid #00ffcc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #008080;
-  color: white;
-}
-
-nav {
   background-color: #1e1e1e;
-  padding: 20px 0;
-  border-bottom: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  display: flex;
+}
+
+/* Sidebar Navigation */
+nav {
+  width: 220px;
+  background: #111;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 3px solid #00ffcc;
+  padding-top: 30px;
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.nav-links li {
+  margin: 20px 0;
 }
 
 .nav-links li a {
   color: #00ffcc;
   text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1.2em;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  border-radius: 6px;
+  padding: 10px;
+  display: block;
+  transition: background 0.3s;
 }
 
 .nav-links li a:hover {
-  border-color: #00ffcc;
-  background-color: #222;
+  background: #00ffcc;
+  color: #111;
+}
+
+/* Main content wrapper */
+main, header, footer {
+  margin-left: 240px;
+  padding: 20px;
+  max-width: 900px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-bottom: 2px dashed #ff6600;
+  padding-bottom: 20px;
+}
+
+.hero img {
+  border-radius: 50%;
+  border: 4px solid #ff0066;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #ff6600;
+}
+
+/* CTA buttons */
+.cta-button {
+  background: #00ffcc;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: #ff0066;
+  color: #fff;
+}
+
+/* Portfolio Timeline */
+.card-grid {
+  display: block;
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.card {
+  border-left: 3px solid #ff6600;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #222;
+  border-radius: 6px;
+}
+
+.card h2 {
+  color: #ff0066;
+}
+
+.card a {
+  color: #00ffcc;
+}
+
+/* Service Alternating Layout */
+.card-grid .card:nth-child(even) {
+  background: #333;
+  border-left-color: #00ffcc;
+}
+
+/* Footer */
+footer {
+  margin-left: 240px;
+  padding: 20px;
+  border-top: 2px dashed #00ffcc;
+  text-align: center;
 }
