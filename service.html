@@ -5,11 +5,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Service — Ryan Roeling</title>
+  <link id="themeStylesheet" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Service</h1>
-    <a href="index.html">Back To Landing</a>
-    
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+      <li><a href="service.html" class="active">Service</a></li>
+      <li><a href="genai.html">AI Page</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Service & Volunteering</h1>
+    <p>Community engagement and giving back through mentoring, volunteering, and knowledge sharing.</p>
+  </header>
+
+  <main>
+    <section class="card-grid">
+      <div class="card">
+        <img src="images/service1.png" alt="Mentoring placeholder" class="card-img">
+        <h2>Mentoring & Tutoring</h2>
+        <p>I volunteer time tutoring classmates in data structures and introductory programming. I enjoy explaining technical concepts with practical examples.</p>
+        <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a>
+      </div>
+
+      <div class="card">
+        <img src="images/service2.png" alt="Open source placeholder" class="card-img">
+        <h2>Open Source Contributions</h2>
+        <p>I make small contributions to documentation and bug fixes in open-source projects. Sharing code and knowledge helps me grow while supporting others.</p>
+        <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>
+      </div>
+
+      <div class="card">
+        <img src="images/service3.png" alt="Community outreach placeholder" class="card-img">
+        <h2>Community Outreach</h2>
+        <p>I would like to contribute to local coding clubs and outreach programs for younger students, introducing them to programming basics.</p>
+        <a href="https://www.coursera.org/" target="_blank">Coursera</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="button1()">Switch Theme</button>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+  <script src="functions.js"></script>
 </body>
 </html>
