@@ -4,35 +4,50 @@
 <html>
 <head>
 <title>Ryan Roeling</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link id="themeStylesheet" rel="stylesheet" type="text/css" href="style.css">
+  <link id="themeStylesheet" rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <nav>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="qualifications.html">Qualifications</a></li>
-    <li><a href="service.html">Service</a></li>
-    <li><a href="genai.html">AI Page</a></li>
-  </ul>
-</nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="genai.html">AI Page</a></li>
+    </ul>
+  </nav>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="center"><h3>Welcome to Ryan Roeling's Website!</h3></td>
-  </tr>
-  <tr>
-    <td align="center"><p>Here is just boiler plate stuff while I fill out the details for the website.</p></td>
-  </tr>
-</table>
-<p class="blue_overline_text">This is the first paragraph type for a initial general style</p>
-<p id="red_underline_text">Thi second paragraph is to show the variety in paragraph styles available.</p>
-<button type="button" onclick="button1()">Switch Theme</button>
-<p id="output">Press the button to toggle stylesheets</p>
-<script src="functions.js"></script>
+  <header class="hero">
+    <h1>Welcome, I’m Ryan Roeling</h1>
+    <img id="profileImage" src="images/profile-light.jpg" 
+         alt="Profile photo of Ryan Roeling" 
+         width="250" height="250" 
+         style="border-radius:50%; margin:20px 0;">
+    
+    <p>
+      What I may lack in professional experience, I make up for in dedication to learning, persistence, and a creative drive to solve problems. I approach challenges in computer science by defining them clearly, breaking them down, and iterating until I discover a viable solution. My optimistic outlook and relentless pursuit of improvement are qualities I carry into every project I work on.
+    </p>
+    <p>
+      My journey into computer science began in high school, where a game design course first sparked my passion for programming. Since then, I’ve had immense joy pursuing CS as a professional path, from building 2D and 3D games in Unity (<a href="https://unity.com/" target="_blank">Unity</a>) to tackling algorithms, data structures, and even seam-carving programs in my university courses. Each project has deepened my skills and reinforced my excitement for the field.
+    </p>
+    <p>
+      Today, I’m especially fascinated by artificial intelligence and its potential to reshape the way we live and work. I aim to continue developing as both a problem-solver and collaborator, and I look forward to contributing to projects where AI and innovative software can make a real impact. Explore my <a href="portfolio.html">portfolio</a> to see what I’ve been building, or visit my <a href="qualifications.html">qualifications</a> page to learn more about my skills and interests.
+    </p>
 
+    <div style="margin-top:20px;">
+      <a class="cta-button" href="portfolio.html">View My Work</a> |
+      <a class="cta-button" href="https://www.linkedin.com/" target="_blank">LinkedIn</a> |
+      <a class="cta-button" href="https://github.com/" target="_blank">GitHub</a> |
+      <a class="cta-button" href="https://open.spotify.com/playlist/yourplaylistid" target="_blank">Spotify Playlist</a>
+    </div>
+  </header>
+
+  <footer>
+    <button type="button" onclick="button1()">Switch Theme</button>
+    <p id="output">Press the button to toggle stylesheets and profile image</p>
+  </footer>
+
+  <script src="functions.js"></script>
 </body>
-
 </html>
