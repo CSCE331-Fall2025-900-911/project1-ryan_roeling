@@ -5,11 +5,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ryan Roeling</title>
-    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="style.css">
+    <title>Portfolio — Ryan Roeling</title>
+  <link id="themeStylesheet" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Portfolio</h1>
-    <a href="index.html">Back To Landing</a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="genai.html">AI Page</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Technical Portfolio</h1>
+    <p>Here are some of my projects, each with images and descriptions. More details and source code are linked when available.</p>
+  </header>
+
+  <main>
+    <section class="card-grid">
+      <div class="card">
+        <img src="images/project1.png" alt="Project 1 placeholder" class="card-img">
+        <h2>Banking Simulation</h2>
+        <p>A Java-based multithreaded banking system that simulates transactions across checking and savings accounts.</p>
+        <a href="https://github.com/" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="images/project2.png" alt="Project 2 placeholder" class="card-img">
+        <h2>Course Dashboard</h2>
+        <p>An HTML, CSS, and JavaScript dashboard for managing courses, assignments, and deadlines in a responsive layout.</p>
+        <a href="https://developer.mozilla.org/" target="_blank">Documentation Reference</a>
+      </div>
+
+      <div class="card">
+        <img src="images/project3.png" alt="Project 3 placeholder" class="card-img">
+        <h2>Algorithm Visualizer</h2>
+        <p>A small web app to animate sorting and graph algorithms, helping users understand time complexity visually.</p>
+        <a href="https://stackoverflow.com/" target="_blank">Community Reference</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="button1()">Switch Theme</button>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+  <script src="functions.js"></script>
 </body>
 </html>
