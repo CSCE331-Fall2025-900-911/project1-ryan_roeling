@@ -138,6 +138,7 @@ footer {
 .main-article .section {
   flex: 1 1 45%; 
   background: #222; 
-  padding: 10px;
+  padding: 15px;
   border-radius: 6px;
+  box-sizing: border-box;
 }
