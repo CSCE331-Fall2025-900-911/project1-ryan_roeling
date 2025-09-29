@@ -129,7 +129,19 @@ footer {
   text-align: center;
 }
 
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  margin-left: 0; 
+}
+
+.sidebar {
+  grid-column: 1; 
+}
+
+
 .main-article {
+  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 20px;
@@ -140,3 +152,5 @@ footer {
   padding: 14px;
   border-radius: 8px;
 }
+
+
