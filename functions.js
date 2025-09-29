@@ -12,13 +12,16 @@ function applyTheme(isDefault) {
 }
 
 function button1() {
-  let isDefault = localStorage.getItem("theme") === "default";
-  isDefault = !isDefault; 
+  let current = localStorage.getItem("theme") || "default";
+  let isDefault = current === "default"; 
+
+  isDefault = !isDefault;
+
   localStorage.setItem("theme", isDefault ? "default" : "alternate");
   applyTheme(isDefault);
 }
 
 window.onload = () => {
-  const saved = localStorage.getItem("theme");
-  applyTheme(saved !== "alternate"); 
+  const saved = localStorage.getItem("theme") || "default";
+  applyTheme(saved === "default"); 
 };
