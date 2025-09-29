@@ -128,3 +128,16 @@ footer {
   border-top: 2px dashed #00ffcc;
   text-align: center;
 }
+
+.main-article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-article p {
+  flex: 1 1 45%; 
+  background: #222; 
+  padding: 10px;
+  border-radius: 6px;
+}
