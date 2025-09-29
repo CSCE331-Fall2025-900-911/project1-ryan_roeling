@@ -135,7 +135,7 @@ footer {
   gap: 20px;
 }
 
-.main-article p {
+.main-article .section {
   flex: 1 1 45%; 
   background: #222; 
   padding: 10px;
